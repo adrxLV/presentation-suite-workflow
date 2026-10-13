@@ -25,24 +25,44 @@ This suite enforces an **opinionated, engineered presentation pipeline**. It bri
 We do not design slides by opening a blank GUI editor. Every deck follows a strict multi-tier orchestration pipeline:
 
 ```mermaid
+
 flowchart TD
-    classDef step fill:#18181b,stroke:#3f3f46,stroke-width:1px,color:#f4f4f5
-    classDef accent fill:#0EE071,stroke:#000000,stroke-width:2px,color:#000000
+    step1["1. Narrative and Structured Argument
+    academic-pptx and pitch-deck-creator
+    Define thesis, empirical dilemma, and conclusions
+    Formulate Action Titles and apply Ghost Deck Test"]
 
-    step1["**1. Narrative & Structured Argument**<br/>academic-pptx · pitch-deck-creator<br/><br/>Define thesis, empirical dilemma, and conclusions<br/>Formulate Action Titles (Ghost Deck Test)"]:::step
+    step2["2. Art Direction and Visual Foundation
+    presentation-design-skill and novaims-presentation
+    Six parameters from P1 Color Foundation to P6 Avoid List
+    Cover Slide First Mandate"]
 
-    step2["**2. Art Direction & Visual Foundation**<br/>presentation-design-skill · novaims-presentation<br/><br/>6 Parameters: P1 (60-25-10-5) to P6 (Avoid List)<br/>Cover Slide First Mandate"]:::step
+    step3["3. Asset Manifest and Composition
+    architecture-diagram, baoyu-infographic, and Mermaid
+    Asymmetric 60/40 layouts and Hero Statistics
+    Editorial tables and directly labeled data graphics"]
 
-    step3["**3. Asset Manifest & Composition**<br/>architecture-diagram · baoyu-infographic · Mermaid<br/><br/>Asymmetric 60/40 layouts, Hero Statistics<br/>Editorial tables, direct-labeled data graphics"]:::step
+    step4["4. Implementation Authority
+    cc-slidev, Slidev Markdown, Vue, UnoCSS, and Tailwind CSS
+    slides.md and design tokens in style.css
+    KaTeX formulas and Shiki highlighted code"]
 
-    step4["**4. Implementation Authority**<br/>cc-slidev · Slidev Markdown + Vue + UnoCSS/Tailwind<br/><br/>slides.md + design tokens in style.css<br/>KaTeX formulas & Shiki line-highlighted code"]:::step
-
-    step5["**5. Visual QA & Multi-Platform Delivery**<br/>10-Point Design Critique · 20% Reduction Rule<br/><br/>Automated export: High-Res PDF (Playwright)<br/>Native 16:9 editable PowerPoint (.pptx)"]:::accent
+    step5["5. Visual QA and Multi-Platform Delivery
+    10-Point Design Critique and 20 Percent Reduction Rule
+    Automated high-resolution PDF export using Playwright
+    Native editable 16:9 PowerPoint PPTX export"]
 
     step1 --> step2
     step2 --> step3
     step3 --> step4
     step4 --> step5
+
+    classDef step fill:#18181b,stroke:#3f3f46,stroke-width:1px,color:#f4f4f5
+    classDef accent fill:#0EE071,stroke:#000000,stroke-width:2px,color:#000000
+
+    class step1,step2,step3,step4 step
+    class step5 accent
+
 ```
 
 
