@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist_exports/
+.playwright/
+*.pdf
+*.pptx
+*.zip
+.DS_Store
+.env
+.cache/
+__pycache__/
+*.pyc

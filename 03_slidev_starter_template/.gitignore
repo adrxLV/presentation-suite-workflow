@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.playwright/
+*.pdf
+*.pptx
+.DS_Store
+.env
+.cache/
