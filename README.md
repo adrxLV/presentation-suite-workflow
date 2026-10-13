@@ -26,42 +26,32 @@ We do not design slides by opening a blank GUI editor. Every deck follows a stri
 
 ```mermaid
 
-flowchart TD
-    step1["1. Narrative and Structured Argument
-    academic-pptx and pitch-deck-creator
-    Define thesis, empirical dilemma, and conclusions
-    Formulate Action Titles and apply Ghost Deck Test"]
+flowchart TB
+    subgraph row1[" "]
+        direction LR
+        step1["1. Narrative and Structured Argument<br/>academic-pptx and pitch-deck-creator<br/>Thesis, empirical dilemma, conclusions<br/>Action Titles and Ghost Deck Test"]
+        step2["2. Art Direction and Visual Foundation<br/>presentation-design-skill and novaims-presentation<br/>Six parameters: P1 Color to P6 Avoid List<br/>Cover Slide First"]
+        step3["3. Asset Manifest and Composition<br/>architecture-diagram, baoyu-infographic, Mermaid<br/>Asymmetric 60/40 layouts and Hero Statistics<br/>Editorial tables and labeled data graphics"]
+        step1 --> step2 --> step3
+    end
 
-    step2["2. Art Direction and Visual Foundation
-    presentation-design-skill and novaims-presentation
-    Six parameters from P1 Color Foundation to P6 Avoid List
-    Cover Slide First Mandate"]
+    subgraph row2[" "]
+        direction LR
+        step4["4. Implementation Authority<br/>cc-slidev, Slidev Markdown, Vue, UnoCSS, Tailwind<br/>slides.md and design tokens in style.css<br/>KaTeX formulas and Shiki highlighted code"]
+        step5["5. Visual QA and Multi-Platform Delivery<br/>10-Point Design Critique and 20% Reduction Rule<br/>Automated high-resolution PDF export via Playwright<br/>Native editable 16:9 PowerPoint PPTX"]
+        step4 --> step5
+    end
 
-    step3["3. Asset Manifest and Composition
-    architecture-diagram, baoyu-infographic, and Mermaid
-    Asymmetric 60/40 layouts and Hero Statistics
-    Editorial tables and directly labeled data graphics"]
-
-    step4["4. Implementation Authority
-    cc-slidev, Slidev Markdown, Vue, UnoCSS, and Tailwind CSS
-    slides.md and design tokens in style.css
-    KaTeX formulas and Shiki highlighted code"]
-
-    step5["5. Visual QA and Multi-Platform Delivery
-    10-Point Design Critique and 20 Percent Reduction Rule
-    Automated high-resolution PDF export using Playwright
-    Native editable 16:9 PowerPoint PPTX export"]
-
-    step1 --> step2
-    step2 --> step3
     step3 --> step4
-    step4 --> step5
 
     classDef step fill:#18181b,stroke:#3f3f46,stroke-width:1px,color:#f4f4f5
     classDef accent fill:#0EE071,stroke:#000000,stroke-width:2px,color:#000000
 
     class step1,step2,step3,step4 step
     class step5 accent
+
+    style row1 fill:none,stroke:none
+    style row2 fill:none,stroke:none
 
 ```
 
